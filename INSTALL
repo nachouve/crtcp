@@ -15,11 +15,12 @@ source bin/activate
 sudo apt-get install postgresql-server-dev-all
 sudo apt-get install python-psycopg2
 sudo easy_install pip
-
+pip install PIL
 
 pip install django
 pip install django-userena #needs many settings INSTALLED_APPS, AUTHENTICATION_BACKENDS, EMAIL_BACKEND,  ...
-pip install django-crowdsourcing 
+pip install django-crowdsourcing
+pip install south 
 
 
 #########################
