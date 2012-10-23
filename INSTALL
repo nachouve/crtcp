@@ -23,7 +23,19 @@ source env/bin/activate
 #########################
 ### Install django and apps
 
-pip install -r requirements.txt
+sudo apt-get install postgresql-server-dev-all
+sudo apt-get install python-psycopg2
+sudo easy_install pip
+pip install PIL
+
+pip install django
+pip install psycopg2
+pip install django-positions
+pip install solr-thumbnail
+pip install flickrapi
+pip install django-userena #needs many settings INSTALLED_APPS, AUTHENTICATION_BACKENDS, EMAIL_BACKEND,  ...
+pip install django-crowdsourcing
+pip install south 
 
 
 #########################

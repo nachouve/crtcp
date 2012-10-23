@@ -1,5 +1,6 @@
 # Django settings for crtcp project.
-
+import os
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -41,11 +42,12 @@ USE_I18N = True
 USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
-USE_TZ = True
+# CHANGED TEMPORARILY
+USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -132,6 +134,7 @@ INSTALLED_APPS = (
     'accounts',
     'south',
     'django.contrib.flatpages',
+    'crowdsourcing'
 )
 
 AUTHENTICATION_BACKENDS = (
