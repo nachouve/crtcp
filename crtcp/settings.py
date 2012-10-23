@@ -94,6 +94,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'userena.middleware.UserenaLocaleMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -103,10 +104,15 @@ ROOT_URLCONF = 'crtcp.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'crtcp.wsgi.application'
 
+import os
+PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, 'templates'),
+    os.path.join(PROJECT_PATH, 'templates/flatpages'),
 )
 
 INSTALLED_APPS = (
@@ -125,6 +131,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
     'accounts',
     'south',
+    'django.contrib.flatpages',
 )
 
 AUTHENTICATION_BACKENDS = (
