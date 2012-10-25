@@ -12,3 +12,6 @@ pycrypto==2.6
 ssh==1.7.14
 wsgiref==0.1.2
 sorl-thumbnail==3.2.5
+flickrapi==1.4.2
+geopy==0.94.2
+-e git://github.com/jpwatts/django-positions.git#egg=django-positions
