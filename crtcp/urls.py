@@ -26,3 +26,7 @@ urlpatterns = patterns('',
      'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT})
 )
+
+urlpatterns += patterns('django.contrib.flatpages.views',
+    (r'^(?P<url>.*)$', 'flatpage'),
+)
