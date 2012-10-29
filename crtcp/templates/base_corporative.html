@@ -1,0 +1,194 @@
+<html>
+<head>
+<style>
+
+* {
+padding: 0;
+margin: 0;
+background-repeat: no-repeat;
+border: 0;
+}
+
+body {
+	background: url("http://www.cmati.xunta.es/tema-portal-cmati/images/fondos/fondoPortalCmati.jpg") top center no-repeat;
+    font: 62.5% Arial,"Trebuchet MS","Lucida Sans",Calibri;
+}
+
+#wrapper {
+background-repeat: repeat-y;
+padding: 0 11px;
+width: 980px;
+margin: 0 auto;
+}
+
+#cabeceira {
+background-image: url("http://www.cmati.xunta.es/tema-portal-cmati/images/fondos/fondoCabeceiraCmati.jpg");
+background-repeat: no-repeat;
+height: 243px;
+width: 980px;
+position: relative;
+}
+
+#menuSuperior div {
+    float: right;
+    padding: 5px 0;
+    display: block;
+}
+
+#menuSuperior #selectorIdioma {
+padding-left: 85px;
+padding-right: 20px;
+text-transform: uppercase;
+}
+
+#cabeceira h1 a, #cabeceira2 h1 a {
+background-image: url("http://www.cmati.xunta.es/tema-portal-cmati/images/logoCMATI.png");
+display: block;
+font-size: 0;
+height: 56px;
+text-indent: -9999em;
+width: 272px;
+float: left;
+margin: 22px 18px;
+}
+
+.fila {
+display: block;
+}
+
+.fila::after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+div {
+    display: block;
+}
+
+#menuPrincipalInt {
+background: url("http://www.cmati.xunta.es/tema-portal-cmati/images/fondos/bandaMenu.png") top left repeat-x;
+width: 938px;
+height: 30px;
+padding: 0 21px;
+}
+
+ul, menu, dir {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+
+ul {
+list-style: none;
+}
+
+#menuPrincipal {
+    position: relative;
+    top: 180px;
+    left: 0px;
+    margin-left: 0px;
+    
+}
+
+#menuPrincipalInt li a {
+color: white;
+text-transform: uppercase;
+font-size: 1.1em;
+font-weight: bold;
+padding: 8px 17px;
+display: block;
+}
+
+.remateMenuPrincipalInt {
+background: url("http://www.cmati.xunta.es/tema-portal-cmati/images/fondos/remateMenu.png") no-repeat;
+width: 11px;
+height: 51px;
+right: -11px;
+top: 0;
+position: absolute;
+}
+
+#menuPrincipalInt li{
+    float:left;
+    color:#fff;
+    background:url("http://www.cmati.xunta.es/tema-portal-cmati/images/fondos/separadorMenu.png") center right no-repeat;
+    padding-right:2px;
+}
+#menuPrincipalInt li a{
+    color:#fff;text-transform:uppercase;
+    font-size:1.1em;
+    font-weight:bold;
+    padding:8px 17px;
+    display:block;
+}
+
+#menuPrincipalInt .pico{background:url("http://www.cmati.xunta.es/tema-portal-cmati/images/fondos/picos/picoMenu.png") bottom center no-repeat;
+width:11px;
+height:8px;
+position:absolute;
+top:30px;
+}
+
+#menuPrincipalInt li.activo{
+    position:relative;
+    margin-left:-2px;
+    background:none;
+}
+    
+#menuPrincipalInt li.activo a{background-color:#FFF;color:#3D7342;display:block;}
+
+#subMenuPrincipalInt{background-color:#FFF;width:980px;}
+#subMenuPrincipalInt li{float:left;background:url("../images/fondos/separadorSubMenu.png") center right no-repeat;height:38px;overflow:hidden;}#subMenuPrincipalInt li a{display:block;font-size:1.1em;padding:8px 8px;color:#3D7342;height:22px;}#subMenuPrincipalInt li.activo{background:none;margin-left:-2px;}
+#subMenuPrincipalInt li.activo a{background-color:#EAEFD9;font-weight:bold;font-weight:bold;}
+
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+    
+<div id="menuSuperior" class="fila">	
+<div id="selectorIdioma">
+	<span>GALEGO</span> | 
+	<a href="http://www.cmati.xunta.es/portada?p_p_id=82&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_count=1&amp;_82_struts_action=%2Flanguage%2Fview&amp;_82_redirect=%2F&amp;languageId=es_ES" title="Portal en CASTELLANO">
+    CASTELLANO</a>
+</div>
+<div>
+<a href="http://www.cmati.xunta.es/suxestions" title="Suxestións">Suxestións</a> </div>
+<div class="separador">|</div>
+<div><a href="http://www.cmati.xunta.es/mapa-do-portal" title="Mapa do portal" accesskey="1">Mapa do portal</a></div>
+<div class="separador">|</div>
+<div><a href="http://www.cmati.xunta.es/accesibilidade" title="Accesibilidade"  accesskey="2">Accesibilidade</a></div>
+<div class="separador">|</div>
+<div><a href="http://www.cmati.xunta.es/atendemolo" title="Atendémolo/a" accesskey="3">Atendémolo/a</a></div></div>
+
+<div id="cabeceira" class="fila">	
+<h1 class="logo">	<a href="http://www.cmati.xunta.es/portada" title="Portada - CMATI"  accesskey="0">CMATI</a>	
+</h1>	
+      
+    <!--<div class="portlet-borderless-container" style="">
+        --
+    </div> --> 
+        <div id="menuPrincipal">   
+            <div id="menuPrincipalInt" class="fila">    
+            <ul>    
+                <li class="menuSupLink"><a href="/admin/" title="Admin">Admin</a></li>
+                <li class="menuSupLink"><a href="/home/" title="Home">Inicio</a></li>
+            </ul>
+            </div>
+            <div class="remateMenuPrincipalInt"></div>
+        </div>
+        </div>
+        </div>
+
+</div> <!-- Wraper-->
+
+</body>
+</html>
