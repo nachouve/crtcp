@@ -1,12 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
+     <title>{% block title %}{% endblock %}</title>
+
+{% block headertags %}{% endblock %}
 <style>
 
 * {
 padding: 0;
 margin: 0;
 background-repeat: no-repeat;
-border: 0;
+/*border: 0;*/
 }
 
 body {
@@ -75,6 +79,7 @@ height: 30px;
 padding: 0 21px;
 }
 
+
 ul, menu, dir {
 display: block;
 list-style-type: disc;
@@ -88,6 +93,7 @@ list-style-type: disc;
 ul {
 list-style: none;
 }
+
 
 #menuPrincipal {
     position: relative;
@@ -149,46 +155,51 @@ top:30px;
 #subMenuPrincipalInt li.activo a{background-color:#EAEFD9;font-weight:bold;font-weight:bold;}
 
 </style>
+
 </head>
 <body>
 
 <div id="wrapper">
     
 <div id="menuSuperior" class="fila">	
-<div id="selectorIdioma">
-	<span>GALEGO</span> | 
-	<a href="http://www.cmati.xunta.es/portada?p_p_id=82&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_count=1&amp;_82_struts_action=%2Flanguage%2Fview&amp;_82_redirect=%2F&amp;languageId=es_ES" title="Portal en CASTELLANO">
-    CASTELLANO</a>
-</div>
-<div>
-<a href="http://www.cmati.xunta.es/suxestions" title="Suxestións">Suxestións</a> </div>
-<div class="separador">|</div>
-<div><a href="http://www.cmati.xunta.es/mapa-do-portal" title="Mapa do portal" accesskey="1">Mapa do portal</a></div>
-<div class="separador">|</div>
-<div><a href="http://www.cmati.xunta.es/accesibilidade" title="Accesibilidade"  accesskey="2">Accesibilidade</a></div>
-<div class="separador">|</div>
-<div><a href="http://www.cmati.xunta.es/atendemolo" title="Atendémolo/a" accesskey="3">Atendémolo/a</a></div></div>
+    <div id="selectorIdioma">
+	   <span>GALEGO</span> | 
+	   <a href="http://www.cmati.xunta.es/portada?" title="Portal en CASTELLANO">CASTELLANO</a>
+    </div>
+    <div><a href="http://www.cmati.xunta.es/suxestions" title="Suxestións">Suxestións</a> </div>
+    <div class="separador">|</div>
+    <div><a href="http://www.cmati.xunta.es/mapa-do-portal" title="Mapa do portal" accesskey="1">Mapa do portal</a></div>
+    <div class="separador">|</div>
+    <div><a href="http://www.cmati.xunta.es/accesibilidade" title="Accesibilidade"  accesskey="2">Accesibilidade</a></div>
+    <div class="separador">|</div>
+    <div><a href="http://www.cmati.xunta.es/atendemolo" title="Atendémolo/a" accesskey="3">Atendémolo/a</a></div>
+</div> <!-- menuSuperior-->
 
 <div id="cabeceira" class="fila">	
-<h1 class="logo">	<a href="http://www.cmati.xunta.es/portada" title="Portada - CMATI"  accesskey="0">CMATI</a>	
-</h1>	
+    <h1 class="logo">
+      <a href="http://www.cmati.xunta.es/portada" title="Portada - CMATI"  accesskey="0">CMATI</a>	
+    </h1>	
       
     <!--<div class="portlet-borderless-container" style="">
         --
     </div> --> 
-        <div id="menuPrincipal">   
+    <div id="menuPrincipal">   
             <div id="menuPrincipalInt" class="fila">    
             <ul>    
                 <li class="menuSupLink"><a href="/admin/" title="Admin">Admin</a></li>
                 <li class="menuSupLink"><a href="/home/" title="Home">Inicio</a></li>
+                <li class="menuSupLink"><a href="/surveys/bloque1/" title="Home">Enquisa</a></li>
+                <li class="menuSupLink"><a href="/acerca/" title="Home">Acerca de</a></li>
             </ul>
             </div>
             <div class="remateMenuPrincipalInt"></div>
-        </div>
-        </div>
-        </div>
+   </div> <!-- menuPrincipal-->
+</div> <!-- cabeceira-->
+        
+{% block content %}{% endblock %}
 
 </div> <!-- Wraper-->
+
 
 </body>
 </html>
