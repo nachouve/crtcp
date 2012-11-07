@@ -1,0 +1,13 @@
+{% for hidden in form.hidden_fields %}
+  {{ hidden }}
+{% endfor %}
+
+{% for field in form.visible_fields %}
+  <div class="fieldWrapper">
+    {{ field.errors }}
+    {% if form.question.xvm %}
+      <iframe src="{{form.question.xvm}}" width="600" > </iframe>
+    {% endif %}
+    {{ field.label_tag }}: {{ field }}
+  </div>
+{% endfor %}

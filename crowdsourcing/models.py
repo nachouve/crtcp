@@ -292,6 +292,7 @@ POSITION_HELP = ("What order does this question appear in the survey form and "
 
 
 class Question(models.Model):
+    xvm = models.URLField(blank=True)
     survey = models.ForeignKey(Survey, related_name="questions")
     fieldname = models.CharField(
         max_length=32,
