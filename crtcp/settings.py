@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'crtcp',                      # Or path to database file if using sqlite3.
         'USER': 'postgres',                      # Not used with sqlite3.
         'PASSWORD': 'postgres',                  # Not used with sqlite3.
@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
+    'django.contrib.gis',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'userena', 
@@ -134,7 +135,8 @@ INSTALLED_APPS = (
     'accounts',
     'south',
     'django.contrib.flatpages',
-    'crowdsourcing'
+    'crowdsourcing',
+    'crtcp'
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -179,3 +181,5 @@ LOGGING = {
         },
     }
 }
+
+API_LIMIT_PER_PAGE = 0

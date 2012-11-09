@@ -7,8 +7,11 @@ from django.views.generic.simple import redirect_to
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from crtcp.api import UPAIResource
+
 admin.autodiscover()
 
+upaiResource = UPAIResource()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'crtcp.views.home', name='home'),
@@ -19,6 +22,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    (r'^api/', include(upaiResource.urls)),
     (r'^accounts/', include('userena.urls')),
     ('^$', redirect_to, {'url':'/home/' }),
     (r'^surveys/', include('crowdsourcing.urls')),

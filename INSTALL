@@ -37,6 +37,13 @@ pip install django-userena #needs many settings INSTALLED_APPS, AUTHENTICATION_B
 pip install django-crowdsourcing
 pip install south 
 
+#########################
+### Install Tastypie
+##### Can't be done with pip install because latest version isn't available there yet
+git clone git://github.com/toastdriven/django-tastypie.git
+mv django-tastypie/tastypie lib/python2.7/site-packages/tastypie
+rm -rf django-tastypie
+
 
 #########################
 ### Create DB
