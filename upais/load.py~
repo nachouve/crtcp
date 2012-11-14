@@ -1,0 +1,19 @@
+import os
+from django.contrib.gis.utils import LayerMapping
+from models import upais
+
+upais_mapping = {
+    'tipo' : 'TIPO',
+    'area_paisaxe' : 'Area_pais',
+    'upai' : 'unidade_pa',
+    'hectareas' : 'Hectares',
+    'geom' : 'MULTIPOLYGON',
+}
+
+upais_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), '../shp/', 'UNIDADES_PAISAXISTICAS.shp'))
+
+def run(verbose=True):
+    lm = LayerMapping(upais, upais_shp, upais_mapping,
+                      transform=False, encoding='iso-8859-1')
+
+    lm.save(strict=True, verbose=verbose)
