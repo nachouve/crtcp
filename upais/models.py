@@ -12,3 +12,5 @@ class upai(models.Model):
     def __unicode__(self):
         return str(self.tipo)+'-'+self.unidad_paisaxe
 
+    class Meta:
+        ordering = ["area_paisaxe", "unidad_paisaxe"]

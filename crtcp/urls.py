@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     (r'^accounts/', include('userena.urls')),
     ('^$', redirect_to, {'url':'/home/' }),
     (r'^surveys/', include('crowdsourcing.urls')),
+    (r'^upai/', include('upais.urls')),
     (r'^media/(?P<path>.*)$',
      'django.views.static.serve',
      {'document_root': settings.MEDIA_ROOT})

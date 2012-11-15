@@ -1,0 +1,14 @@
+{% extends "base_corporative.html" %}
+
+{% block title %}title{% endblock %}
+
+{% block content %}
+   <h1>Unidades de Paisaxe: {{upai.unidad_paisaxe}}</h1>
+   <ul>
+     <li> <strong>Area Paisaxe: </strong> {{upai.area_paisaxe}}</li>
+     <li> <strong>Nome Unidade: </strong> {{upai.unidad_paisaxe}}</li>
+     <li> <strong>Hectareas: </strong> {{upai.hectareas|floatformat:2}}</li>
+   </ul>
+   <a href="/upai/"> Ver todas </a>
+{% endblock %}
+

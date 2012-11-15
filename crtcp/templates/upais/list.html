@@ -1,0 +1,13 @@
+{% extends "base_corporative.html" %}
+
+{% block title %}title{% endblock %}
+
+{% block content %}
+   <h1>Listaxe de Unidades de Paisaxe</h1>
+   <ul>
+   {% for upai in upai_list.all %}
+         <li><a href="id/{{upai.id}}">{{upai.unidad_paisaxe}} - {{upai.area_paisaxe}}</a></li>
+   {% endfor %}
+   </ul>
+{% endblock %}
+

@@ -97,7 +97,7 @@ list-style: none;
 
 #menuPrincipal {
     position: relative;
-    top: 180px;
+    top: 150px;
     left: 0px;
     margin-left: 0px;
     
@@ -154,6 +154,11 @@ top:30px;
 #subMenuPrincipalInt li{float:left;background:url("../images/fondos/separadorSubMenu.png") center right no-repeat;height:38px;overflow:hidden;}#subMenuPrincipalInt li a{display:block;font-size:1.1em;padding:8px 8px;color:#3D7342;height:22px;}#subMenuPrincipalInt li.activo{background:none;margin-left:-2px;}
 #subMenuPrincipalInt li.activo a{background-color:#EAEFD9;font-weight:bold;font-weight:bold;}
 
+#content {
+background-color: white;
+padding: 5px 10px;
+}
+
 </style>
 
 </head>
@@ -188,15 +193,18 @@ top:30px;
             <ul>    
                 <li class="menuSupLink"><a href="/admin/" title="Admin">Admin</a></li>
                 <li class="menuSupLink"><a href="/home/" title="Home">Inicio</a></li>
-                <li class="menuSupLink"><a href="/surveys/bloque1/" title="Home">Enquisa</a></li>
+                <li class="menuSupLink"><a href="/surveys/carticipa/" title="Home">Enquisa</a></li>
                 <li class="menuSupLink"><a href="/acerca/" title="Home">Acerca de</a></li>
             </ul>
             </div>
             <div class="remateMenuPrincipalInt"></div>
    </div> <!-- menuPrincipal-->
 </div> <!-- cabeceira-->
-        
-{% block content %}{% endblock %}
+
+<div id="content">        
+  {% block content %}{% endblock %}
+</div>
+
 
 </div> <!-- Wraper-->
 
